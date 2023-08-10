@@ -1,0 +1,121 @@
+/****  ESTILOS PARA DISPOSITIVOS MOVILES  ****/
+/* GENERALES */
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+/* FIN GENERALES */
+
+
+
+/* LAYOUT */
+
+/*GRID*/
+ .grid-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    " header "
+    " section--texto "
+    " section--botones "
+    " section--devolucion ";
+ }
+
+ .header{
+    grid-area: header;
+ }
+
+ .section--texto{
+    grid-area: section--texto ;
+ }
+
+ .section--botones{
+    grid-area: section--botones;
+ }
+
+ .section--devolucion{
+grid-area: section--devolucion;
+ }
+
+/*FIN GRID*/
+/*FLEX BOX*/
+/*FIN FLEX BOX*/
+
+/* FIN LAYOUT */
+
+
+/**** ESTILOS PARA DISPOSITIVOS TABLETS ****/
+  
+/* Media query para tabletas (ejemplo: ancho máximo de 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; 
+    }
+    /* LAYOUT */
+    /*GRID*/
+    
+    /*FIN GRID*/
+    /*FLEX BOX*/
+    /*FIN FLEX BOX*/
+    /* FIN LAYOUT */
+}
+  
+/**** ESTILOS PARA DISPOSITIVOS ESCRITORIO ****/
+
+/* Media query para pantallas de escritorio (ejemplo: ancho mínimo de 1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;    
+    }
+
+    /* LAYOUT */
+    /*GRID*/
+    .grid-content{
+        display: grid;
+        grid-template-columns: 0.3fr 0.3fr 2fr 4fr 4fr 0.5fr 5fr 0.3fr;
+        grid-template-rows: 0.3fr 1fr 4fr 4fr 2fr 0.3fr;
+        grid-template-areas: 
+        " .           .             .                 .                       .                       .                   .                  .  "
+        " .           .           header            header                  header                    .         section--devolucion          .  "
+        " .           .             .               section--texto          section--texto            .         section--devolucion          .  "
+        " .           .             .               section--texto          section--texto            .         section--devolucion          .  "
+        " .           .             .               section--botones        section--botones          .         section--devolucion          .  "
+        " .           .             .                  .                       .                      .                   .                  .  ";
+    }
+
+    .header{
+        grid-area: header;
+    }
+
+    .section--texto {
+        grid-area: section--texto ;
+    }
+
+    .section--botones{
+        grid-area: section--botones;
+    }
+
+    .section--devolucion{
+        grid-area: section--devolucion;
+    }
+
+
+
+    /*FIN GRID*/
+    /*FLEX BOX*/
+
+    /*FIN FLEX BOX*/ 
+    /* FIN LAYOUT */
+
+}
+
+
+/* FIN ESTILOS  */
